@@ -4,5 +4,6 @@ class LanguageKeys {
 
   static const String az = 'az';
   static const String en = 'en';
+  static const String ru = 'ru';
   static const String hello = 'hello';
 }
