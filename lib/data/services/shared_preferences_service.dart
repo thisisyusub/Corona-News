@@ -36,4 +36,9 @@ class SharedPreferencesService {
       await _preferences.setString(SharedPrefKeys.countryCode, countryCode);
 
   String get countryCode => _preferences.getString(SharedPrefKeys.countryCode);
+
+  Future<void> setDarkModeInfo(bool isDarkModeEnabled) async =>
+      await _preferences.setBool(SharedPrefKeys.theme, isDarkModeEnabled);
+
+  bool get isDarkModeEnabled => _preferences.getBool(SharedPrefKeys.theme);
 }

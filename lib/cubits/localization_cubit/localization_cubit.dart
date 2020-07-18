@@ -12,7 +12,7 @@ import 'package:cubit/cubit.dart';
 import '../../data/services/shared_preferences_service.dart';
 import '../../utils/constants/language_keys.dart';
 import '../../presentation/shared/supported_locales.dart';
-import './language_cubit_contractor.dart';
+import 'impl_language_cubit.dart';
 
 part 'localization_state.dart';
 
