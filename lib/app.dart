@@ -5,6 +5,7 @@
  * Written by: Kanan Yusubov <kanan.yusubov@yandex.com>, July 2020
  */
 
+import 'package:fimber/fimber.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_cubit/flutter_cubit.dart';
@@ -22,13 +23,16 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return CubitBuilder<LocalizationCubit, LocalizationState>(
       builder: (context, localizationCubit) {
+        Fimber.i('Building localization...');
         return CubitBuilder<ThemeCubit, ThemeState>(
           builder: (context, themeCubit) {
+            Fimber.i('Building theme...');
             return LayoutBuilder(
               builder: (context, constraints) {
                 return OrientationBuilder(
                   builder: (context, orientation) {
                     /// Setup for responsiveness
+                    Fimber.i('initializing responsiveness...');
                     SizeConfig().init(constraints, orientation);
                     return MaterialApp(
                       title: 'Corona news',
