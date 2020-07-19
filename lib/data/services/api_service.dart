@@ -11,7 +11,7 @@ class ApiService {
   ApiService._internal() {
     dio = new Dio();
     dio.options
-      ..baseUrl = 'https://covid-az.herokuapp.com/api'
+      ..baseUrl = 'http://covid19-az.herokuapp.com/api'
       ..contentType = 'application/Json';
   }
 

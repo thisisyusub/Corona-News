@@ -14,6 +14,7 @@ final ThemeData lightTheme = ThemeData(
   primaryColorLight: AppColors.primaryLightColor,
   primaryColorDark: AppColors.primaryDarkColor,
   brightness: Brightness.light,
+  accentColor: Colors.redAccent,
 );
 
 final ThemeData darkTheme = ThemeData(
@@ -22,6 +23,7 @@ final ThemeData darkTheme = ThemeData(
   primaryColorDark: AppColors.primaryDarkColor,
   brightness: Brightness.dark,
   buttonColor: Colors.orange,
+  accentColor: Colors.redAccent,
   primaryTextTheme: TextTheme(
     button: f30.copyWith(color: Colors.white),
     subtitle1: f15.copyWith(color: Colors.white),
