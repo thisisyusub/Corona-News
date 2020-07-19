@@ -12,16 +12,13 @@ import 'package:cubit/cubit.dart';
 import '../../data/services/shared_preferences_service.dart';
 import '../../utils/constants/language_keys.dart';
 import '../../presentation/shared/supported_locales.dart';
-import 'impl_language_cubit.dart';
 
 part 'localization_state.dart';
 
-class LocalizationCubit extends Cubit<LocalizationState>
-    implements ILanguageCubit {
+class LocalizationCubit extends Cubit<LocalizationState> {
   LocalizationCubit(Locale locale)
       : super(LocalizationState(locale ?? supportedLocales[0]));
 
-  @override
   Future<void> changeLocale(String selectedLanguageCode) async {
     final sharedPrefService = await SharedPreferencesService.instance;
     final defaultLanguageCode = sharedPrefService.languageCode;

@@ -36,7 +36,7 @@ class App extends StatelessWidget {
                     SizeConfig().init(constraints, orientation);
                     return MaterialApp(
                       title: 'Corona news',
-                      locale: Locale('az', 'AZ'),
+                      locale: localizationCubit.locale,
                       supportedLocales: supportedLocales,
                       darkTheme: darkTheme,
                       theme: lightTheme,

@@ -5,10 +5,8 @@
  * Written by: Kanan Yusubov <kanan.yusubov@yandex.com>, July 2020
  */
 
-import 'package:flutter/material.dart';
+import '../models/news.dart';
 
-abstract class IThemeCubit {
-  Future<ThemeMode> loadDefaultTheme();
-
-  Future<void> changeTheme(bool value);
+abstract class INewsRepository {
+  Future<List<News>> getAllNews();
 }

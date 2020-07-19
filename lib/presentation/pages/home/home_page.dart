@@ -6,10 +6,15 @@
  */
 
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../widgets/app_bottom_navy_bar.dart';
 import '../news/news_page.dart';
 import '../global/global_statistics_page.dart';
 import '../country_statistics/country_statistics_page.dart';
+import '../../../data/repositories/news_repository.dart';
+import '../../../cubits/news_cubit/news_cubit.dart';
+import '../../../data/services/api_service.dart';
+import 'package:flutter_cubit/flutter_cubit.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -46,7 +51,15 @@ class _HomePageState extends State<HomePage> {
           children: <Widget>[
             CountryStatisticsPage(),
             GlobalStatisticsPage(),
-            NewsPage(),
+            RepositoryProvider<NewsRepository>(
+              create: (context) => NewsRepository(ApiService()),
+              child: CubitProvider<NewsCubit>(
+                create: (context) =>
+                    NewsCubit(context.repository<NewsRepository>())
+                      ..getAllNews(),
+                child: NewsPage(),
+              ),
+            ),
           ],
         ),
       ),

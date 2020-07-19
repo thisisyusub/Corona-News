@@ -12,11 +12,15 @@ import './cubits/localization_cubit/localization_cubit.dart';
 import 'package:flutter_cubit/flutter_cubit.dart';
 import './app.dart';
 import './cubits/theme_cubit/theme_cubit.dart';
+import './utils/constants/config.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  Fimber.plantTree(DebugTree(useColors: true));
+  if (Config.kHttpLogging) {
+    Fimber.plantTree(DebugTree(useColors: true));
+  }
+
   final defaultLocale = await _doLocalizationLogic();
   final defaultThemeMode = await _doThemeLogic();
 

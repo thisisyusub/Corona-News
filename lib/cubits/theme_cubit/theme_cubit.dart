@@ -8,15 +8,13 @@
 import 'package:flutter/material.dart';
 import 'package:equatable/equatable.dart';
 import 'package:cubit/cubit.dart';
-import './impl_theme_cubit.dart';
 import '../../data/services/shared_preferences_service.dart';
 
 part './theme_state.dart';
 
-class ThemeCubit extends Cubit<ThemeState> implements IThemeCubit {
+class ThemeCubit extends Cubit<ThemeState> {
   ThemeCubit(ThemeMode defaultThemeMode) : super(ThemeState(defaultThemeMode));
 
-  @override
   Future<void> changeTheme(bool value) async {
     final sharedPrefService = await SharedPreferencesService.instance;
     final isDarkModeEnabled = sharedPrefService.isDarkModeEnabled;
@@ -27,7 +25,6 @@ class ThemeCubit extends Cubit<ThemeState> implements IThemeCubit {
     emit(ThemeState(value ? ThemeMode.dark : ThemeMode.light));
   }
 
-  @override
   Future<ThemeMode> loadDefaultTheme() async {
     final sharedPrefService = await SharedPreferencesService.instance;
     final isDarkModeEnabled = sharedPrefService.isDarkModeEnabled;
