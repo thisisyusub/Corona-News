@@ -21,6 +21,7 @@ dependencies:
   flutter_bloc: ^5.0.1
   equatable: ^1.2.2
   fimber: ^0.4.2
+  bottom_navy_bar: ^5.5.0
   flutter_localizations:
     sdk: flutter
 

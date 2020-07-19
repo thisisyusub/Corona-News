@@ -12,5 +12,7 @@ class LanguageKeys {
   static const String az = 'az';
   static const String en = 'en';
   static const String ru = 'ru';
-  static const String hello = 'hello';
+  static const String statistics = 'statistics';
+  static const String global = 'global';
+  static const String news = 'news';
 }

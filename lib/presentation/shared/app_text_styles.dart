@@ -11,7 +11,6 @@ import './app_colors.dart';
 
 final TextStyle f30 = TextStyle(
   fontSize: SizeConfig.textMultiplier * 4.6875,
-  color: AppColors.primaryColor,
   fontWeight: FontWeight.bold,
 );
 

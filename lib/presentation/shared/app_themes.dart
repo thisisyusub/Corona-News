@@ -7,6 +7,7 @@
 
 import 'package:flutter/material.dart';
 import './app_colors.dart';
+import './app_text_styles.dart';
 
 final ThemeData lightTheme = ThemeData(
   primaryColor: AppColors.primaryColor,
@@ -20,4 +21,9 @@ final ThemeData darkTheme = ThemeData(
   primaryColorLight: AppColors.primaryLightColor,
   primaryColorDark: AppColors.primaryDarkColor,
   brightness: Brightness.dark,
+  buttonColor: Colors.orange,
+  primaryTextTheme: TextTheme(
+    button: f30.copyWith(color: Colors.white),
+    subtitle1: f15.copyWith(color: Colors.white),
+  ),
 );
