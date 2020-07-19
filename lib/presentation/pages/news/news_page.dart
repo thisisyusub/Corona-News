@@ -24,7 +24,14 @@ class NewsPage extends StatelessWidget {
           }
 
           if (newsState is NewsSuccess) {
-            return Center(child: Text('success'));
+            final news = newsState.news;
+
+            return ListView.builder(
+              itemBuilder: (context, i) => ListTile(
+                title: Text(news[i].title),
+              ),
+              itemCount: news.length,
+            );
           }
 
           return Container();
