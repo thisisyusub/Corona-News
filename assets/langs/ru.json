@@ -1,5 +1,12 @@
 {
     "statistics": "Статистика",
-    "global": "Главная страница",
-    "news": "Новости"
+    "countries": "Countries",
+    "news": "Новости",
+    "active_cases": "Активные случаи",
+    "critical_cases" : "Критические случаи",
+    "new_cases" : "Новые случаи",
+    "new_deaths": "Новые смерти",
+    "total_cases": "Всего случаев",
+    "total_deaths": "Всего смертей",
+    "total_recovered": "Всего восстановлено"
 }

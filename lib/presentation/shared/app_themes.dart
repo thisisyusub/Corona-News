@@ -16,8 +16,10 @@ final ThemeData lightTheme = ThemeData(
   brightness: Brightness.light,
   accentColor: Colors.redAccent,
   cardColor: Colors.white,
+  highlightColor: AppColors.lightStatItemColor,
   textTheme: TextTheme(
-    headline5: f24,
+    headline6: f20,
+    subtitle1: f16,
     subtitle2: f14,
     caption: f12,
   ),
@@ -31,8 +33,10 @@ final ThemeData darkTheme = ThemeData(
   buttonColor: Colors.orange,
   accentColor: Colors.redAccent,
   cardColor: Colors.black12,
+  highlightColor: AppColors.darkStatItemColor,
   textTheme: TextTheme(
-    headline5: f24,
+    headline6: f20,
+    subtitle1: f16.copyWith(color: Colors.white),
     subtitle2: f14.copyWith(color: Colors.white),
     caption: f12.copyWith(color: Colors.white),
   ),

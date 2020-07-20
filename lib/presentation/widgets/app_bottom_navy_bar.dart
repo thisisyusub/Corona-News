@@ -25,13 +25,13 @@ class _AppBottomNavyBarState extends State<AppBottomNavyBar> {
       onItemSelected: widget.onItemSelected,
       items: [
         BottomNavyBarItem(
-          icon: Icon(Icons.show_chart),
-          title: Text(LanguageKeys.statistics.translate(context)),
+          icon: Icon(Icons.view_list),
+          title: Text(LanguageKeys.countries.translate(context)),
           activeColor: Colors.red,
         ),
         BottomNavyBarItem(
-          icon: Icon(Icons.apps),
-          title: Text(LanguageKeys.global.translate(context)),
+          icon: Icon(Icons.show_chart),
+          title: Text(LanguageKeys.statistics.translate(context)),
           activeColor: Colors.red,
         ),
         BottomNavyBarItem(

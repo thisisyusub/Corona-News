@@ -19,10 +19,10 @@ class NewsRepository implements INewsRepository {
   Future<List<News>> getAllNews() async {
     String endPoint = '/news';
 
-    Fimber.i('NewsRepository: fetcing all news');
+    Fimber.i('fetcing all news');
     final result = await apiService.dio.get(endPoint);
 
-    Fimber.i('NewsRepository fetching all news response: ${result.statusCode}');
+    Fimber.i('fetching all news response: ${result.statusCode}');
 
     if (result.statusCode == 200) {
       final convertedNews =

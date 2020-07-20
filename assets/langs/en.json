@@ -1,5 +1,12 @@
 {
     "statistics": "Statistics",
-    "global": "Home",
-    "news": "News"
+    "countries": "Countries",
+    "news": "News",
+    "active_cases": "Active cases",
+    "critical_cases" : "Critical cases",
+    "new_cases" : "New cases",
+    "new_deaths": "New deaths",
+    "total_cases": "Total cases",
+    "total_deaths": "Total deaths",
+    "total_recovered": "Total recovered"
 }

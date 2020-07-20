@@ -14,4 +14,6 @@ class AppColors {
   static const Color primaryColor = Color.fromRGBO(100, 14, 184, 1);
   static const Color primaryLightColor = Color.fromRGBO(149, 160, 235, 1);
   static const Color primaryDarkColor = Color(0xFF334788);
+  static final Color lightStatItemColor = Colors.blueGrey[100];
+  static const Color darkStatItemColor = Colors.black26;
 }

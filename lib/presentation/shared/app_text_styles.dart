@@ -8,10 +8,16 @@
 import 'package:flutter/material.dart';
 import '../../utils/responsive_helper/size_config.dart';
 
-final TextStyle f24 = TextStyle(
-  fontSize: SizeConfig.textMultiplier * 3.75,
+final TextStyle f20 = TextStyle(
+  fontSize: SizeConfig.textMultiplier * 3.125,
   fontWeight: FontWeight.bold,
   color: Colors.red,
+);
+
+final TextStyle f16 = TextStyle(
+  fontSize: SizeConfig.textMultiplier * 2.5,
+  fontWeight: FontWeight.bold,
+  color: Colors.black,
 );
 
 final TextStyle f14 = TextStyle(
