@@ -18,10 +18,13 @@ class NewsItem extends StatelessWidget {
             children: <Widget>[
               Text(
                 news.dateTime,
-                style: TextStyle(fontWeight: FontWeight.bold),
+                style: Theme.of(context).textTheme.subtitle2,
               ),
               SizedBox(height: 10),
-              Text(news.title),
+              Text(
+                news.title,
+                style: Theme.of(context).textTheme.caption,
+              ),
             ],
           ),
         ),

@@ -12,7 +12,7 @@ class ApiService {
     dio = new Dio();
     dio.options
       ..baseUrl = 'http://covid19-az.herokuapp.com/api'
-      ..contentType = 'application/Json';
+      ..contentType = 'application/json';
   }
 
   Dio dio;

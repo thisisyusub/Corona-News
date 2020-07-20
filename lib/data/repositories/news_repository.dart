@@ -9,7 +9,6 @@ import 'package:fimber/fimber.dart';
 import '../models/news.dart';
 import '../contractors/impl_news_repository.dart';
 import '../services/api_service.dart';
-import '../exceptions/http_exception.dart';
 
 class NewsRepository implements INewsRepository {
   NewsRepository(this.apiService) : assert(apiService != null);
@@ -20,23 +19,17 @@ class NewsRepository implements INewsRepository {
   Future<List<News>> getAllNews() async {
     String endPoint = '/news';
 
-    try {
-      Fimber.i('NewsRepository: fetcing all news');
-      final result = await apiService.dio.get(endPoint);
+    Fimber.i('NewsRepository: fetcing all news');
+    final result = await apiService.dio.get(endPoint);
 
-      Fimber.i(
-          'NewsRepository fetching all news response: ${result.statusCode}');
+    Fimber.i('NewsRepository fetching all news response: ${result.statusCode}');
 
-      if (result.statusCode == 200) {
-        final convertedNews =
-            result.data.map<News>((news) => News.fromJson(news)).toList();
-        return convertedNews;
-      } else {
-        return [];
-      }
-    } catch (error) {
-      Fimber.e('NewsRepository:  fetching all news error: ${error.toString()}');
-      throw HttpException(error.toString());
+    if (result.statusCode == 200) {
+      final convertedNews =
+          result.data.map<News>((news) => News.fromJson(news)).toList();
+      return convertedNews;
     }
+
+    return [];
   }
 }

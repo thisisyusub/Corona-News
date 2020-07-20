@@ -5,6 +5,7 @@
  * Written by: Kanan Yusubov <kanan.yusub@gmail.com>, July 2020
  */
 
+import 'package:dio/dio.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 import '../../data/models/news.dart';
@@ -25,7 +26,9 @@ class NewsCubit extends Cubit<NewsState> {
     try {
       emit(NewsInProgress());
       final news = await newsRepository.getAllNews();
-      emit(NewsSuccess(news));
+      emit(NewsSuccess(news ?? []));
+    } on DioError catch (e) {
+      emit(NewsFailure('failure: ${e.toString()}'));
     } on HttpException catch (e) {
       emit(NewsFailure(e.message));
     } catch (e) {

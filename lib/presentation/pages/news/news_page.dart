@@ -15,14 +15,10 @@ class NewsPage extends StatelessWidget {
             SliverAppBar(
               pinned: true,
               centerTitle: true,
-              backgroundColor: Colors.white,
+              backgroundColor: Theme.of(context).scaffoldBackgroundColor,
               title: Text(
                 LanguageKeys.news.translate(context),
-                style: TextStyle(
-                  color: Colors.red,
-                  fontSize: 25,
-                  fontWeight: FontWeight.bold,
-                ),
+                style: Theme.of(context).textTheme.headline5,
               ),
             ),
             CubitConsumer<NewsCubit, NewsState>(
@@ -60,49 +56,3 @@ class NewsPage extends StatelessWidget {
     );
   }
 }
-
-/*
-CubitConsumer<NewsCubit, NewsState>(
-        listenWhen: (previous, current) => current is NewsFailure,
-        buildWhen: (previous, current) => current is! NewsFailure,
-        listener: (context, newsState) {
-          if (newsState is NewsFailure) {
-            print('news error: ${newsState.message}');
-          }
-        },
-        builder: (context, newsState) {
-          if (newsState is NewsInProgress) {
-            return Center(child: CircularProgressIndicator());
-          }
-
-          if (newsState is NewsSuccess) {
-            final news = newsState.news;
-
-            return ListView.builder(
-              itemBuilder: (context, i) => Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Card(
-                  child: Container(
-                    padding: const EdgeInsets.all(16.0),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        Text(
-                          news[i].dateTime,
-                          style: TextStyle(fontWeight: FontWeight.bold),
-                        ),
-                        SizedBox(height: 10),
-                        Text(news[i].title),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-              itemCount: news.length,
-            );
-          }
-
-          return Container();
-        },
-      )
-*/
