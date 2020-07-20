@@ -7,7 +7,6 @@
 
 import 'package:flutter/material.dart';
 import '../../utils/responsive_helper/size_config.dart';
-import './app_colors.dart';
 
 final TextStyle f24 = TextStyle(
   fontSize: SizeConfig.textMultiplier * 3.75,

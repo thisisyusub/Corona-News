@@ -23,10 +23,16 @@ class NewsPage extends StatelessWidget {
             ),
             CubitConsumer<NewsCubit, NewsState>(
               listenWhen: (previous, current) => current is NewsFailure,
-              buildWhen: (previous, current) => current is! NewsFailure,
               listener: (context, newsState) {
                 if (newsState is NewsFailure) {
-                  print('news error: ${newsState.message}');
+                  Scaffold.of(context)
+                    ..hideCurrentSnackBar()
+                    ..showSnackBar(
+                      SnackBar(
+                        backgroundColor: Colors.red,
+                        content: Text('There is a problem with server!'),
+                      ),
+                    );
                 }
               },
               builder: (context, newsState) {
@@ -43,6 +49,20 @@ class NewsPage extends StatelessWidget {
                     delegate: SliverChildBuilderDelegate(
                       (context, index) => NewsItem(news[index]),
                       childCount: news.length,
+                    ),
+                  );
+                }
+
+                if (newsState is NewsFailure) {
+                  return SliverFillRemaining(
+                    child: Center(
+                      child: Text(
+                        'There is problem with server :(',
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 20,
+                        ),
+                      ),
                     ),
                   );
                 }

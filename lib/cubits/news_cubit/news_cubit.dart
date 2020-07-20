@@ -7,7 +7,6 @@
 
 import 'package:dio/dio.dart';
 import 'package:equatable/equatable.dart';
-import 'package:flutter/material.dart';
 import '../../data/models/news.dart';
 import 'package:cubit/cubit.dart';
 import '../../data/contractors/impl_news_repository.dart';
