@@ -8,5 +8,7 @@
     "new_deaths": "Новые смерти",
     "total_cases": "Всего случаев",
     "total_deaths": "Всего смертей",
-    "total_recovered": "Всего восстановлено"
+    "total_recovered": "Всего восстановлено",
+    "dark_mode": "Темный режим",
+    "change_language": "изменение языка"
 }

@@ -17,6 +17,7 @@ import './utils/responsive_helper/size_config.dart';
 import './presentation/shared/app_themes.dart';
 import './cubits/theme_cubit/theme_cubit.dart';
 import './utils/localization_helper/app_localizations.dart';
+import './presentation/router.dart';
 
 class App extends StatelessWidget {
   @override
@@ -48,6 +49,7 @@ class App extends StatelessWidget {
                       ],
                       debugShowCheckedModeBanner: kDebugMode,
                       home: HomePage(),
+                      onGenerateRoute: Router.onGenerateRoute,
                     );
                   },
                 );

@@ -22,4 +22,6 @@ class LanguageKeys {
   static const String total_cases = 'total_cases';
   static const String total_deaths = 'total_deaths';
   static const String total_recovered = 'total_recovered';
+  static const String dark_mode = 'dark_mode';
+  static const String change_language = 'change_language';
 }

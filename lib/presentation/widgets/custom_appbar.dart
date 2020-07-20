@@ -1,5 +1,13 @@
+/*
+ * Copyright (c) 2020, Kanan Yusubov. - All Rights Reserved
+ * Unauthorized copying of this file, via any medium is strictly prohibited.
+ * Proprietary and confidential
+ * Written by: Kanan Yusubov <kanan.yusubov@yandex.com>, July 2020
+ */
+
 import 'package:flutter/material.dart';
 import '../../utils/extensions/translator.dart';
+import '../../utils/constants/routes.dart';
 
 class CustomAppBar extends PreferredSize {
   CustomAppBar(this.titleKey) : assert(titleKey != null);
@@ -21,7 +29,7 @@ class CustomAppBar extends PreferredSize {
         IconButton(
           icon: Icon(Icons.settings),
           color: Colors.redAccent,
-          onPressed: () => {},
+          onPressed: () => Navigator.of(context).pushNamed(Routes.settings),
         ),
       ],
     );

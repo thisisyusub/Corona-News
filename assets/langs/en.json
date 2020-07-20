@@ -8,5 +8,7 @@
     "new_deaths": "New deaths",
     "total_cases": "Total cases",
     "total_deaths": "Total deaths",
-    "total_recovered": "Total recovered"
+    "total_recovered": "Total recovered",
+    "dark_mode": "Dark mode",
+    "change_language": "Change language"
 }
