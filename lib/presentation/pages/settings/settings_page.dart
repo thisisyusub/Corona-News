@@ -1,10 +1,3 @@
-/*
- * Copyright (c) 2020, Kanan Yusubov. - All Rights Reserved
- * Unauthorized copying of this file, via any medium is strictly prohibited.
- * Proprietary and confidential
- * Written by: Kanan Yusubov <kanan.yusubov@yandex.com>, July 2020
- */
-
 import 'package:flutter/material.dart';
 import '../../../cubits/theme_cubit/theme_cubit.dart';
 // import '../../../cubits/localization_cubit/localization_cubit.dart';
