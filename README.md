@@ -1,16 +1,19 @@
-# corona_news
+<p align="center">
+Corona News
+</p>
 
-A new Flutter project.
+<p align="center">
+<img alt="GitHub Workflow Status (branch)" src="https://img.shields.io/github/workflow/status/yusubx/Corona-news/Flutter%20CI/master">
+<img alt="GitHub issues" src="https://img.shields.io/github/issues/yusubx/Corona-news">
+<img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/yusubx/Corona-news">
+<img alt="GitHub" src="https://img.shields.io/github/license/yusubx/Corona-news"> 
+<img alt="GitHub stars" src="https://img.shields.io/github/stars/yusubx/Corona-news">
+<img alt="GitHub forks" src="https://img.shields.io/github/forks/yusubx/Corona-news">
+<img alt="GitHub watchers" src="https://img.shields.io/github/watchers/yusubx/Corona-news">
+<img alt="GitHub contributors" src="https://img.shields.io/github/contributors/yusubx/Corona-news">
+<img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/yusubx/Corona-news">
+</p>
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
