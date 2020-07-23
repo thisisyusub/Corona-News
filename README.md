@@ -16,4 +16,23 @@ Corona News
 
 ---
 
+## Screenshots
+
+<div style="text-align: center">
+    <table>
+        <tr>
+            <td style="text-align: center">
+                    <img src="country_statistics.png" width="200"/>
+            </td>            
+            <td style="text-align: center">
+                    <img src="global_statistics.png" width="200"/>
+            </td>
+            <td style="text-align: center">
+                    <img src="new.png" width="200" />
+            </td>
+        </tr>
+    </table>
+</div>
+
+
 
