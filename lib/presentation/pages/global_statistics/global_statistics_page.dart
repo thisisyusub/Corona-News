@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import '../../widgets/custom_appbar.dart';
-import 'package:flutter_cubit/flutter_cubit.dart';
 import '../../../cubits/global_statistics_cubit/global_statistics_cubit.dart';
 import '../../../utils/constants/language_keys.dart';
 import '../../../utils/extensions/translator.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class GlobalStatisticsPage extends StatelessWidget {
   @override
@@ -12,7 +12,7 @@ class GlobalStatisticsPage extends StatelessWidget {
       body: CustomScrollView(
         slivers: <Widget>[
           CustomAppBar(LanguageKeys.statistics),
-          CubitConsumer<GlobalStatisticsCubit, GlobalStatisticsState>(
+          BlocConsumer<GlobalStatisticsCubit, GlobalStatisticsState>(
             listenWhen: (_, current) => current is GlobalStatisticsFailure,
             listener: (context, globalStatisticsState) {
               if (globalStatisticsState is GlobalStatisticsFailure) {

@@ -7,9 +7,10 @@ import '../country_statistics/country_statistics_page.dart';
 import '../../../data/repositories/news_repository.dart';
 import '../../../cubits/news_cubit/news_cubit.dart';
 import '../../../data/services/api_service.dart';
-import 'package:flutter_cubit/flutter_cubit.dart';
 import '../../../cubits/global_statistics_cubit/global_statistics_cubit.dart';
 import '../../../data/repositories/global_statistics_repository.dart';
+import '../../../data/repositories/country_statistics_repository.dart';
+import '../../../cubits/country_statistics_cubit/country_statistics_cubit.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -45,10 +46,18 @@ class _HomePageState extends State<HomePage> {
             },
             controller: _pageController,
             children: <Widget>[
-              CountryStatisticsPage(),
+              RepositoryProvider<CountryStatisticsRepository>(
+                create: (context) => CountryStatisticsRepository(ApiService()),
+                child: BlocProvider<CountryStatisticsCubit>(
+                  create: (context) => CountryStatisticsCubit(
+                    context.repository<CountryStatisticsRepository>(),
+                  )..fetchAllCountryStatistics(),
+                  child: CountryStatisticsPage(),
+                ),
+              ),
               RepositoryProvider<GlobalStatisticsRepository>(
                 create: (context) => GlobalStatisticsRepository(ApiService()),
-                child: CubitProvider<GlobalStatisticsCubit>(
+                child: BlocProvider<GlobalStatisticsCubit>(
                   create: (context) => GlobalStatisticsCubit(
                       context.repository<GlobalStatisticsRepository>())
                     ..fetchGlobalStatistics(),
@@ -57,7 +66,7 @@ class _HomePageState extends State<HomePage> {
               ),
               RepositoryProvider<NewsRepository>(
                 create: (context) => NewsRepository(ApiService()),
-                child: CubitProvider<NewsCubit>(
+                child: BlocProvider<NewsCubit>(
                   create: (context) =>
                       NewsCubit(context.repository<NewsRepository>())
                         ..getAllNews(),

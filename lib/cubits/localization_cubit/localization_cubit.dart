@@ -1,10 +1,10 @@
 import 'dart:async';
 import 'package:flutter/widgets.dart';
 import 'package:equatable/equatable.dart';
-import 'package:cubit/cubit.dart';
 import '../../data/services/shared_preferences_service.dart';
 import '../../utils/constants/language_keys.dart';
 import '../../presentation/shared/supported_locales.dart';
+import 'package:bloc/bloc.dart';
 
 part 'localization_state.dart';
 

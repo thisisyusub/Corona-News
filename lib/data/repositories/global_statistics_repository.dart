@@ -1,5 +1,5 @@
 import '../../data/models/stat.dart';
-import 'package:fimber/fimber_base.dart';
+import 'package:fimber/fimber.dart';
 import '../contractors/impl_global_statistics_repository.dart';
 import '../services/api_service.dart';
 

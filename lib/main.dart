@@ -2,7 +2,6 @@ import 'package:fimber/fimber.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import './cubits/localization_cubit/localization_cubit.dart';
-import 'package:flutter_cubit/flutter_cubit.dart';
 import './app.dart';
 import './cubits/theme_cubit/theme_cubit.dart';
 import './utils/constants/config.dart';
@@ -20,10 +19,10 @@ void main() async {
   runApp(
     MultiBlocProvider(
       providers: [
-        CubitProvider<LocalizationCubit>(
+        BlocProvider<LocalizationCubit>(
           create: (_) => LocalizationCubit(defaultLocale),
         ),
-        CubitProvider<ThemeCubit>(
+        BlocProvider<ThemeCubit>(
           create: (_) => ThemeCubit(defaultThemeMode),
         ),
       ],

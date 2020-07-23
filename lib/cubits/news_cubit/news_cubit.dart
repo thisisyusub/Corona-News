@@ -1,9 +1,9 @@
 import 'package:dio/dio.dart';
 import 'package:equatable/equatable.dart';
 import '../../data/models/news.dart';
-import 'package:cubit/cubit.dart';
 import '../../data/contractors/impl_news_repository.dart';
 import '../../data/exceptions/http_exception.dart';
+import 'package:bloc/bloc.dart';
 
 part './news_state.dart';
 

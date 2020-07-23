@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_cubit/flutter_cubit.dart';
 import '../../../cubits/news_cubit/news_cubit.dart';
 import './news_item.dart';
 import '../../widgets/custom_appbar.dart';
 import '../../../utils/constants/language_keys.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class NewsPage extends StatelessWidget {
   @override
@@ -12,7 +12,7 @@ class NewsPage extends StatelessWidget {
       body: CustomScrollView(
         slivers: <Widget>[
           CustomAppBar(LanguageKeys.news),
-          CubitConsumer<NewsCubit, NewsState>(
+          BlocConsumer<NewsCubit, NewsState>(
             listenWhen: (previous, current) => current is NewsFailure,
             listener: (context, newsState) {
               if (newsState is NewsFailure) {

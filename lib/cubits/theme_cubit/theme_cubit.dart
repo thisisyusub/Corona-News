@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:equatable/equatable.dart';
-import 'package:cubit/cubit.dart';
 import '../../data/services/shared_preferences_service.dart';
+import 'package:bloc/bloc.dart';
 
 part './theme_state.dart';
 
