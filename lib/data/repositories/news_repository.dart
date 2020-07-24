@@ -12,7 +12,7 @@ class NewsRepository implements INewsRepository {
   Future<List<News>> getAllNews() async {
     String endPoint = '/news';
 
-    Fimber.i('fetcing all news');
+    Fimber.i('fetching all news');
     final result = await apiService.dio.get(endPoint);
 
     Fimber.i('fetching all news response: ${result.statusCode}');
