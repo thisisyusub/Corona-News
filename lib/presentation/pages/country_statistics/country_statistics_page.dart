@@ -15,10 +15,14 @@ class CountryStatisticsPage extends StatelessWidget {
           BlocBuilder<CountryStatisticsCubit, CountryStatisticsState>(
             builder: (context, countryStatisticsState) {
               if (countryStatisticsState is CountryStatisticsSuccess) {
-                return SliverList(
-                  delegate: SliverChildBuilderDelegate(
-                    (context, i) =>
-                        CountryItem(countryStatisticsState.countries[i]),
+                return SliverPadding(
+                  padding: const EdgeInsets.all(8.0),
+                  sliver: SliverList(
+                    delegate: SliverChildBuilderDelegate(
+                      (context, i) =>
+                          CountryItem(countryStatisticsState.countries[i]),
+                      childCount: countryStatisticsState.countries.length,
+                    ),
                   ),
                 );
               }

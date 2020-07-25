@@ -1,0 +1,10 @@
+{
+    "dart.previewFlutterUiGuides": true,
+    "dart.previewFlutterUiGuidesCustomTracking": true,
+    "workbench.colorCustomizations": {
+      "[Material Theme Darker]": {
+        "statusBar.debuggingBackground": "#3949AB",
+        "statusBar.background": "#3949AB",
+      }
+    },
+}
