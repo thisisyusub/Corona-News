@@ -44,8 +44,6 @@ Corona News
 - Get statistics of countries
 - Get News about Corona-virus from [Repuclic of Azerbaijan Cabinet of Ministers](https://cabmin.gov.az/)
 
----
-
 ## Topics you can learn based on this app
 - BLoC State Management using [Flutter Bloc](https://pub.dev/packages/flutter_bloc)
 - [BLoC Architecture](https://bloclibrary.dev/#/architecture)
@@ -58,12 +56,8 @@ Corona News
 - Usage of Mixins, Extension methods, Slivers in Flutter
 - Named Routing
 
----
-
 ## Maintainers
 [Kanan Yusubov](https://github.com/yusubx)
-
----
 
 Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
 
