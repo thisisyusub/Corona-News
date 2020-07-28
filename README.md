@@ -16,25 +16,28 @@ Corona News
 
 ---
 
-## Screenshots
+## Pages
 
 <div style="text-align: center">
     <table>
         <tr>
             <td style="text-align: center">
-                    <img src="country_statistics.png" width="200"/>
+                    <img src="showcase/countries.gif" width="200"/>
             </td>            
             <td style="text-align: center">
-                    <img src="global_statistics.png" width="200"/>
-            </td>
+                    <img src="showcase/global.gif" width="200"/>
+            </td>     
             <td style="text-align: center">
-                    <img src="new.png" width="200" />
-            </td>
+                    <img src="showcase/news.gif" width="200"/>
+            </td>     
         </tr>
     </table>
 </div>
 
 
 Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+
+## Maintainers
+[Kanan Yusubov](https://github.com/yusubx)
 
 
