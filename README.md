@@ -14,8 +14,6 @@ Corona News
 <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/yusubx/Corona-news">
 </p>
 
----
-
 ## Pages
 
 <div style="text-align: center">
@@ -34,9 +32,7 @@ Corona News
     </table>
 </div>
 
-Download apk from [here](https://drive.google.com/file/d/14O0TAxTn33ZbeAohYMhw-M--zP7T56N1/view?usp=sharing).
-
----
+Download apk from [here](https://drive.google.com/file/d/14O0TAxTn33ZbeAohYMhw-M--zP7T56N1/view?usp=sharing)
 
 ## Functionalities
 
