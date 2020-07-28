@@ -3,12 +3,16 @@
     "countries": "ölkələr",
     "news": "Xəbərlər",
     "active_cases": "Aktiv xəstə",
-    "critical_cases" : "Kiritk xəstə",
-    "new_cases" : "Yeni xəstə",
+    "critical_cases": "Kiritk xəstə",
+    "new_cases": "Yeni xəstə",
     "new_deaths": "Yeni ölüm",
     "total_cases": "Ümumi xəstə",
     "total_deaths": "Ümumi ölüm halı",
     "total_recovered": "Ümumi sağalan",
     "dark_mode": "Tünd tema",
-    "change_language": "Dili dəyiş"
+    "change_language": "Dili dəyiş",
+    "az": "Azərbaycan dili",
+    "en": "Ingilis dili",
+    "ru": "Rus dili",
+    "choose_language": "Dili seçin"
 }

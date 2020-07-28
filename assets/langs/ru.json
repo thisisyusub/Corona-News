@@ -10,5 +10,9 @@
     "total_deaths": "Всего смертей",
     "total_recovered": "Всего восстановлено",
     "dark_mode": "Темный режим",
-    "change_language": "изменение языка"
+    "change_language": "изменение языка",
+    "az": "Азербайджанец",
+    "en": "Aнглийский",
+    "ru": "Pусский",
+    "choose_language": "Выберите язык"
 }

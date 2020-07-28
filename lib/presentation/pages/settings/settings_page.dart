@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import '../../../cubits/theme_cubit/theme_cubit.dart';
-// import '../../../cubits/localization_cubit/localization_cubit.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+import '../../../cubits/theme_cubit/theme_cubit.dart';
 import '../../../utils/constants/language_keys.dart';
 import '../../../utils/extensions/translator.dart';
+import '../../dialogs/language_dialog.dart';
 
 class SettingsPage extends StatelessWidget {
   @override
@@ -17,6 +18,10 @@ class SettingsPage extends StatelessWidget {
           ListTile(
             title: Text(
               LanguageKeys.change_language.translate(context),
+            ),
+            onTap: () => showDialog(
+              context: context,
+              builder: (context) => LanguageDialog(),
             ),
           ),
           Divider(),

@@ -10,5 +10,9 @@
     "total_deaths": "Total deaths",
     "total_recovered": "Total recovered",
     "dark_mode": "Dark mode",
-    "change_language": "Change language"
+    "change_language": "Change language",
+    "az": "Azerbaijani",
+    "en": "English",
+    "ru": "Russian",
+    "choose_language": "Choose language"
 }

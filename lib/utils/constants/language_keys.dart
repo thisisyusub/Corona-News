@@ -17,4 +17,5 @@ class LanguageKeys {
   static const String total_recovered = 'total_recovered';
   static const String dark_mode = 'dark_mode';
   static const String change_language = 'change_language';
+  static const String choose_language = 'choose_language';
 }
