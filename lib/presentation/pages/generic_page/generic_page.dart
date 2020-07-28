@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../widgets/custom_appbar.dart';
 import '../../widgets/states/sliver_states.dart';
@@ -34,7 +35,7 @@ class GenericPage<C extends Cubit<S>, S> extends StatelessWidget {
                   ..showSnackBar(
                     SnackBar(
                       backgroundColor: Colors.red,
-                      content: Text(cubitState.message),
+                      content: Text(cubitState.message ?? "No Internet"),
                     ),
                   );
               }
@@ -45,7 +46,14 @@ class GenericPage<C extends Cubit<S>, S> extends StatelessWidget {
               }
 
               if (cubitState is Failure) {
-                return SliverFailure(cubitState.message);
+                return cubitState.message == null
+                    ? SliverFillRemaining(
+                        hasScrollBody: false,
+                        child: Image.asset(
+                          'assets/images/no-connection.png',
+                        ),
+                      )
+                    : SliverFailure(cubitState.message);
               }
 
               if (cubitState is Success) {

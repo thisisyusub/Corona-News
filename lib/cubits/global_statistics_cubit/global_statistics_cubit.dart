@@ -17,9 +17,10 @@ class GlobalStatisticsCubit extends Cubit<GenericState>
   void fetchGlobalStatistics() async {
     try {
       if (!await isConnected()) {
-        emit(Failure('There is no internet connection!'));
+        emit(Failure());
         return;
       }
+
 
       emit(InProgress());
       final statistics = await globalStatisticsRepository.getGlobalStatistics();

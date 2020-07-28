@@ -8,6 +8,7 @@ class SliverFailure extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SliverFillRemaining(
+      hasScrollBody: false,
       child: Center(
         child: Text(
           message,

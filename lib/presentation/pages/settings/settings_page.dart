@@ -11,7 +11,7 @@ class SettingsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Settings'),
+        title: Text(LanguageKeys.settings.translate(context)),
       ),
       body: Column(
         children: <Widget>[

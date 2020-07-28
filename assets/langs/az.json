@@ -1,6 +1,6 @@
 {
     "statistics": "Statistika",
-    "countries": "ölkələr",
+    "countries": "Ölkələr",
     "news": "Xəbərlər",
     "active_cases": "Aktiv xəstə",
     "critical_cases": "Kiritk xəstə",
@@ -14,5 +14,6 @@
     "az": "Azərbaycan dili",
     "en": "Ingilis dili",
     "ru": "Rus dili",
-    "choose_language": "Dili seçin"
+    "choose_language": "Dili seçin",
+    "settings": "Tənzimləmələr"
 }

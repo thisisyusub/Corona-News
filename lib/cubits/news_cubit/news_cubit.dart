@@ -17,7 +17,7 @@ class NewsCubit extends Cubit<GenericState> with ConnectivityChecker {
   void getAllNews() async {
     try {
       if (!await isConnected()) {
-        emit(Failure('There is no internet connection!'));
+        emit(Failure());
         return;
       }
 

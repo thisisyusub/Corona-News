@@ -12,7 +12,7 @@ class Initial extends GenericState {}
 class InProgress extends GenericState {}
 
 class Failure extends GenericState {
-  Failure(this.message);
+  Failure([this.message]);
 
   final String message;
 

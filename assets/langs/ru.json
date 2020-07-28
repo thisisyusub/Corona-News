@@ -1,6 +1,6 @@
 {
     "statistics": "Статистика",
-    "countries": "Countries",
+    "countries": "Cтраны",
     "news": "Новости",
     "active_cases": "Активные случаи",
     "critical_cases" : "Критические случаи",
@@ -14,5 +14,6 @@
     "az": "Азербайджанец",
     "en": "Aнглийский",
     "ru": "Pусский",
-    "choose_language": "Выберите язык"
+    "choose_language": "Выберите язык",
+    "settings": "Hастройки"
 }

@@ -25,6 +25,8 @@ final ThemeData darkTheme = ThemeData(
   brightness: Brightness.dark,
   buttonColor: Colors.orange,
   accentColor: Colors.redAccent,
+  indicatorColor: Colors.red,
+  toggleableActiveColor: Colors.red,
   cardColor: Colors.black12,
   highlightColor: AppColors.darkStatItemColor,
   textTheme: TextTheme(

@@ -17,7 +17,7 @@ class CountryStatisticsCubit extends Cubit<GenericState>
   void fetchAllCountryStatistics() async {
     try {
       if (!await isConnected()) {
-        emit(Failure('There is no internet connection!'));
+        emit(Failure());
         return;
       }
 
