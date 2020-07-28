@@ -34,6 +34,8 @@ Corona News
     </table>
 </div>
 
+Download apk from [here](https://drive.google.com/file/d/14O0TAxTn33ZbeAohYMhw-M--zP7T56N1/view?usp=sharing).
+
 ---
 
 ## Functionalities
