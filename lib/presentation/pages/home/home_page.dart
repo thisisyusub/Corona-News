@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
 import '../../widgets/app_bottom_navy_bar.dart';
 import '../news/news_page.dart';
 import '../global_statistics/global_statistics_page.dart';

@@ -1,11 +1,12 @@
 import 'package:shared_preferences/shared_preferences.dart';
+
 import '../../utils/constants/pref_keys.dart';
 
 class SharedPreferencesService {
+  SharedPreferencesService._internal();
+
   static SharedPreferencesService _instance;
   static SharedPreferences _preferences;
-
-  SharedPreferencesService._internal();
 
   static Future<SharedPreferencesService> get instance async {
     if (_instance == null) {

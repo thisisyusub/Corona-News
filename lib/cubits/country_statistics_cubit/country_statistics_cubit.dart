@@ -1,28 +1,34 @@
 import 'package:bloc/bloc.dart';
 import 'package:dio/dio.dart';
-import 'package:equatable/equatable.dart';
+
+import '../generic_state/generic_state.dart';
 import '../../data/models/country.dart';
 import '../../data/contractors/impl_country_statistics_repository.dart';
+import '../../utils/mixin/connection_checker.dart';
 
-part './country_statistics_state.dart';
-
-class CountryStatisticsCubit extends Cubit<CountryStatisticsState> {
+class CountryStatisticsCubit extends Cubit<GenericState>
+    with ConnectivityChecker {
   CountryStatisticsCubit(this.countryStatisticsRepository)
       : assert(countryStatisticsRepository != null),
-        super(CountryStatisticsInitial());
+        super(Initial());
 
   final ICountryStatisticsRepository countryStatisticsRepository;
 
   void fetchAllCountryStatistics() async {
     try {
-      emit(CountryStatisticsInProgress());
+      if (!await isConnected()) {
+        emit(Failure('There is no internet connection!'));
+        return;
+      }
+
+      emit(InProgress());
       final countryStatistics =
           await countryStatisticsRepository.fetchCountryStatistics();
-      emit(CountryStatisticsSuccess(countryStatistics));
+      emit(Success<List<Country>>(countryStatistics));
     } on DioError catch (e) {
-      emit(CountryStatisticsFailure(e.message));
+      emit(Failure(e.message));
     } catch (e) {
-      emit(CountryStatisticsFailure(e.toString()));
+      emit(Failure(e.toString()));
     }
   }
 }

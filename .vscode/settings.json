@@ -5,6 +5,8 @@
       "[Material Theme Darker]": {
         "statusBar.debuggingBackground": "#3949AB",
         "statusBar.background": "#3949AB",
+        "statusBar.foreground": "#fff",
+        "statusBar.debuggingForeground": "#fff",
       }
     },
 }
